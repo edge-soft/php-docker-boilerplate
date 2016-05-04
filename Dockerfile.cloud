@@ -55,7 +55,7 @@ ENV PROVISION_CONTEXT "production"
 COPY etc/             /opt/docker/etc/
 COPY provision/       /opt/docker/provision/
 
-COPY app/             /app/
+COPY ../             /app/
 
 RUN /opt/docker/bin/control.sh provision.role.startup boilerplate-main \
     && /opt/docker/bin/control.sh provision.role.startup boilerplate-deployment \

@@ -18,7 +18,7 @@ app:
     - "8443:443"
     - "10022:22"
   volumes:
-    - ./app/:/app/
+    - ../:/app/
     - /tmp/debug/:/tmp/debug/
     - ./:/docker/
   volumes_from:
