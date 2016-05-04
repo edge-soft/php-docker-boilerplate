@@ -14,9 +14,9 @@ app:
     #- memcached
     #- ftp
   ports:
-    - "8000:80"
-    - "8443:443"
-    - "10022:22"
+    - "80:80"
+    - "443:443"
+  #  - "10022:22"
   volumes:
     - ../:/app/
   volumes_from:
@@ -24,6 +24,8 @@ app:
   env_file:
     - etc/environment.yml
     - etc/environment.production.yml
+  links:
+    - mysql
 
 #######################################
 # MySQL server
